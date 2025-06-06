@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+.myfoot{
+            width: 230px;
+            height: 230px;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            &:hover{
+                >img, &::before{
+                    animation-play-state: paused;
+                }
+                >figcaption{
+                    bottom: -30px;
+                    opacity: 1;
+                }
+                >a{
+                    right: 150%;
+                }
+            }
+            >img, &::before {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            >img{
+                object-fit: cover;
+                animation: fancy1 ease-out infinite alternate 5s;
+            }
+            &::before{
+                content: '';
+                background-color: mediumorchid;
+                animation: fancy2 ease-out infinite alternate 5s;
+            }
+            >figcaption{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 23px;
+                text-transform: capitalize;
+                left: 0;
+                bottom: 0;
+                opacity: 0;
+                transition: 1s;
+                color: mediumorchid;
+            }
+            a{
+                font-size: 25px;
+                color: mediumorchid;
+                position: absolute;
+                right: 50%;
+                text-decoration: none;
+                transition: 1s;
+                &:nth-of-type(1){
+                    top: 20%;
+                    transition-delay: 0.2s;
+                }
+                &:nth-of-type(2){
+                    top: 40%;
+                    transition-delay: 0.4s;
+                }
+                &:nth-of-type(3){
+                    top: 60%;
+                    transition-delay: 0.6s;
+                }
+                &:nth-of-type(4){
+                    top: 80%;
+                    transition-delay: 0.8s;
+                }
+            }
+        }
+        @keyframes fancy1{
+            0%{border-radius:51% 49% 25% 75% / 46% 31% 69% 54% ;}
+            50%{border-radius: 31% 69% 15% 85% / 68% 64% 36% 32% ;}
+            100%{border-radius:18% 82% 76% 24% / 66% 45% 55% 34%  ;}
+        }
+        @keyframes fancy2{
+            0%{border-radius:31% 69% 15% 85% / 68% 64% 36% 32% ;}
+            50%{border-radius:18% 82% 76% 24% / 66% 45% 55% 34%  ;}
+            100%{border-radius:51% 49% 25% 75% / 46% 31% 69% 54%  ;}
+        }
