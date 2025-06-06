@@ -1,6 +1,6 @@
 # game
-memory-game
-- [Demo Project](https://mohananoruztabar.github.io/MusicPlayer/)
+memory - game
+- [Demo Project](https://mohananoruztabar.github.io/game/)
 
 -🙋🏽‍♀️ Developed by Mohana Noruztabar
 
